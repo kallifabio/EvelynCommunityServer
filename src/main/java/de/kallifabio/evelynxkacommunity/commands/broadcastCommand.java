@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.commands;
+package de.kallifabio.evelynxkacommunity.commands;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
@@ -13,7 +13,7 @@ public class broadcastCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "Du musst ein Spieler sein"));
+            sender.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "Du musst ein Spieler sein"));
             return true;
         }
 
@@ -21,7 +21,7 @@ public class broadcastCommand implements CommandExecutor {
         if (player.getName().equals("kallifabio")) {
             if (cmd.getName().equalsIgnoreCase("broadcast")) {
                 if (args.length == 0) {
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&cBitte benutze &6/broadcast <Nachricht>"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&cBitte benutze &6/broadcast <Nachricht>"));
                 }
 
                 if (args.length >= 1) {
@@ -30,17 +30,17 @@ public class broadcastCommand implements CommandExecutor {
                         message = message + args[i] + " ";
                     }
 
-                    Bukkit.broadcastMessage(EvelynCommunity.format(" "));
-                    Bukkit.broadcastMessage(EvelynCommunity.format("&4-----------&cBroadcast&4-----------"));
-                    Bukkit.broadcastMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + message.replaceAll("&", "§")));
-                    Bukkit.broadcastMessage(EvelynCommunity.format("&4-----------&cBroadcast&4-----------"));
-                    Bukkit.broadcastMessage(EvelynCommunity.format(" "));
+                    Bukkit.broadcastMessage(EvelynxkaCommunity.format(" "));
+                    Bukkit.broadcastMessage(EvelynxkaCommunity.format("&4-----------&cBroadcast&4-----------"));
+                    Bukkit.broadcastMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + message.replaceAll("&", "§")));
+                    Bukkit.broadcastMessage(EvelynxkaCommunity.format("&4-----------&cBroadcast&4-----------"));
+                    Bukkit.broadcastMessage(EvelynxkaCommunity.format(" "));
 
                     Bukkit.getOnlinePlayers().forEach(all -> all.playSound(player.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 2));
                 }
             }
         } else {
-            player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + EvelynCommunity.getNoPermission()));
+            player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + EvelynxkaCommunity.getNoPermission()));
         }
         return false;
     }

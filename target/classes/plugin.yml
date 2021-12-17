@@ -1,7 +1,7 @@
-name: EvelynCommunity
+name: EvelynxkaCommunity
 version: 1.0
 author: kallifabio
-main: de.kallifabio.evelyncommunity.EvelynCommunity
+main: de.kallifabio.evelynxkacommunity.EvelynxkaCommunity
 
 commands:
   broadcast:
@@ -11,3 +11,4 @@ commands:
   day:
   night:
   socialmedia:
+  help:

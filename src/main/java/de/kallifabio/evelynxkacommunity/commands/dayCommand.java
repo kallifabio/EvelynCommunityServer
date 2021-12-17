@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.commands;
+package de.kallifabio.evelynxkacommunity.commands;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,7 +12,7 @@ public class dayCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "Du musst ein Spieler sein"));
+            sender.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "Du musst ein Spieler sein"));
             return true;
         }
 
@@ -21,15 +21,15 @@ public class dayCommand implements CommandExecutor {
             if (cmd.getName().equalsIgnoreCase("day")) {
                 if (args.length == 0) {
                     Bukkit.getWorld("world").setTime(1000L);
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&2Du hast die Zeit zu Tag geändert"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&2Du hast die Zeit zu Tag geändert"));
                 }
 
                 if (args.length > 0) {
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&cBitte benutze &6/day"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&cBitte benutze &6/day"));
                 }
             }
         } else {
-            player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + EvelynCommunity.getNoPermission()));
+            player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + EvelynxkaCommunity.getNoPermission()));
         }
         return false;
     }

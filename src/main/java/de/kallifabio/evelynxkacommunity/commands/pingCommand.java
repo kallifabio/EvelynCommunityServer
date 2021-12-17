@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.commands;
+package de.kallifabio.evelynxkacommunity.commands;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,22 +15,22 @@ public class pingCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "Du musst ein Spieler sein"));
+            sender.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "Du musst ein Spieler sein"));
             return true;
         }
 
         final Player player = (Player) sender;
         if (cmd.getName().equalsIgnoreCase("ping")) {
             if (args.length == 0) {
-                player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&6Du hast einen Ping von &9" + getPing(player) + "ms"));
+                player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&6Du hast einen Ping von &9" + getPing(player) + "ms"));
             }
 
             if (args.length == 1) {
                 Player target = Bukkit.getServer().getPlayer(args[0]);
                 if (target == null) {
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&cDer Spieler &7" + args[0] + " &cwurde nicht gefunden"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&cDer Spieler &7" + args[0] + " &cwurde nicht gefunden"));
                 } else {
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&9" + Bukkit.getServer().getPlayer(args[0]).getName().toString() + " &6hat einen Ping von &9" + getPing(target) + "ms"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&9" + Bukkit.getServer().getPlayer(args[0]).getName().toString() + " &6hat einen Ping von &9" + getPing(target) + "ms"));
                 }
             }
         }

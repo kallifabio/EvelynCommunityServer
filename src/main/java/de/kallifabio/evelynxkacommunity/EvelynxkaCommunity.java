@@ -1,31 +1,31 @@
-package de.kallifabio.evelyncommunity;
+package de.kallifabio.evelynxkacommunity;
 
-import de.kallifabio.evelyncommunity.commands.*;
-import de.kallifabio.evelyncommunity.listeners.ChatListener;
-import de.kallifabio.evelyncommunity.listeners.IPCommandListener;
-import de.kallifabio.evelyncommunity.listeners.PlayerListener;
-import de.kallifabio.evelyncommunity.listeners.SleepListener;
-import de.kallifabio.evelyncommunity.manager.ActionbarManager;
-import de.kallifabio.evelyncommunity.manager.BossbarManager;
-import de.kallifabio.evelyncommunity.utils.AutoMessage;
+import de.kallifabio.evelynxkacommunity.commands.*;
+import de.kallifabio.evelynxkacommunity.listeners.ChatListener;
+import de.kallifabio.evelynxkacommunity.listeners.IPCommandListener;
+import de.kallifabio.evelynxkacommunity.listeners.PlayerListener;
+import de.kallifabio.evelynxkacommunity.listeners.SleepListener;
+import de.kallifabio.evelynxkacommunity.manager.ActionbarManager;
+import de.kallifabio.evelynxkacommunity.manager.BossbarManager;
+import de.kallifabio.evelynxkacommunity.utils.AutoMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class EvelynCommunity extends JavaPlugin {
+public class EvelynxkaCommunity extends JavaPlugin {
 
-    private static final String prefix = "&dEvelynCommunity&9Server &8» &r";
+    private static final String prefix = "&dEvelynxkaCommunity&9Server &8» &r";
     private static final String noPermission = "&cDu hast keine Rechte dafür";
-    private static EvelynCommunity instance;
+    private static EvelynxkaCommunity instance;
     private static BossbarManager bossbarManager;
 
     public static String format(String message) {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
 
-    public static EvelynCommunity getInstance() {
+    public static EvelynxkaCommunity getInstance() {
         return instance;
     }
 
@@ -46,6 +46,7 @@ public class EvelynCommunity extends JavaPlugin {
         getCommand("day").setExecutor(new dayCommand());
         getCommand("night").setExecutor(new nightCommand());
         getCommand("socialmedia").setExecutor(new socialmediaCommand());
+        getCommand("help").setExecutor(new helpCommand());
     }
 
     private void updateBar() {

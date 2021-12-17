@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.manager;
+package de.kallifabio.evelynxkacommunity.manager;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
@@ -21,13 +21,13 @@ public class BossbarManager {
     }
 
     public void createBar() {
-        bar = Bukkit.createBossBar(EvelynCommunity.format("&3Powered by §7kallifabio, Bero-Host"), BarColor.BLUE, BarStyle.SOLID);
+        bar = Bukkit.createBossBar(EvelynxkaCommunity.format("&3Powered by §7kallifabio, Bero-Host"), BarColor.BLUE, BarStyle.SOLID);
         bar.setVisible(true);
         task();
     }
 
     public void task() {
-        taskID = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EvelynCommunity.getInstance(), new Runnable() {
+        taskID = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EvelynxkaCommunity.getInstance(), new Runnable() {
             int count = -1;
             double progress = 1.0;
             double time = 1.0 / 30;
@@ -41,22 +41,22 @@ public class BossbarManager {
                     case 0:
                         bar.setColor(BarColor.GREEN);
                         bar.setStyle(BarStyle.SOLID);
-                        bar.setTitle(EvelynCommunity.format("&3Instagram&8: &eevelynkafriedrich"));
+                        bar.setTitle(EvelynxkaCommunity.format("&3Instagram&8: &eevelynkafriedrich"));
                         break;
                     case 1:
                         bar.setColor(BarColor.PINK);
                         bar.setStyle(BarStyle.SOLID);
-                        bar.setTitle(EvelynCommunity.format("&3Discord&8: &eIn Wartung..."));
+                        bar.setTitle(EvelynxkaCommunity.format("&3Discord&8: &eIn Wartung..."));
                         break;
                     case 2:
                         bar.setColor(BarColor.YELLOW);
                         bar.setStyle(BarStyle.SOLID);
-                        bar.setTitle(EvelynCommunity.format("&eEvelynxka Twitch Community Server"));
+                        bar.setTitle(EvelynxkaCommunity.format("&eEvelynxka Twitch Community Server"));
                         break;
                     default:
                         bar.setColor(BarColor.BLUE);
                         bar.setStyle(BarStyle.SOLID);
-                        bar.setTitle(EvelynCommunity.format("&3Powered by §7kallifabio, Bero-Host"));
+                        bar.setTitle(EvelynxkaCommunity.format("&3Powered by §7kallifabio, Bero-Host"));
                         count = -1;
                         break;
                 }

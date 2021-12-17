@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.listeners;
+package de.kallifabio.evelynxkacommunity.listeners;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -22,13 +22,13 @@ public class ChatListener implements Listener {
         String msg = event.getMessage();
         Player target = Bukkit.getServer().getPlayer(player.getName());
 
-        String owner = EvelynCommunity.format("&4Owner &7| &4" + player.getName() + "&7 » &e" + message);
-        String sub = EvelynCommunity.format("&3Sub &7| &3" + player.getName() + "&7 » &e" + message);
-        String defaultplayer = EvelynCommunity.format("&8" + player.getName() + "&7 » &r") + message;
+        String owner = EvelynxkaCommunity.format("&4Owner &7| &4" + player.getName() + "&7 » &e" + message);
+        String sub = EvelynxkaCommunity.format("&3Sub &7| &3" + player.getName() + "&7 » &e" + message);
+        String defaultplayer = EvelynxkaCommunity.format("&8" + player.getName() + "&7 » &r") + message;
 
         if (player.getName().equals("kallifabio")) {
             event.setFormat(owner);
-        }else if (player.getName().equals("")) {
+        } else if (player.getName().equals("")) {
             event.setFormat(sub);
         } else {
             event.setFormat(defaultplayer);
@@ -61,7 +61,7 @@ public class ChatListener implements Listener {
                 event.setCancelled(false);
             } else if (message.contains(blocked)) {
                 event.setCancelled(true);
-                player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&e" + player.getName() + " &cAchte auf deine Wortwahl &8[&e" + blocked + "&8]"));
+                player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&e" + player.getName() + " &cAchte auf deine Wortwahl &8[&e" + blocked + "&8]"));
             }
         }
 
@@ -83,7 +83,7 @@ public class ChatListener implements Listener {
                 event.setCancelled(false);
             } else if (message.contains(werbung)) {
                 event.setCancelled(true);
-                player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&e" + player.getName() + " &cDier ist es nicht erlaubt Werbung zu machen &8[&e" + werbung + "&8]"));
+                player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&e" + player.getName() + " &cDier ist es nicht erlaubt Werbung zu machen &8[&e" + werbung + "&8]"));
             }
         }
     }
@@ -99,7 +99,7 @@ public class ChatListener implements Listener {
                 event.setCancelled(false);
             } else {
                 event.setCancelled(true);
-                player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + EvelynCommunity.getNoPermission()));
+                player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + EvelynxkaCommunity.getNoPermission()));
             }
         }
 
@@ -108,7 +108,7 @@ public class ChatListener implements Listener {
                 event.setCancelled(false);
             } else {
                 event.setCancelled(true);
-                player.sendMessage(EvelynCommunity.format("&fPlugins (6): &aTwitter&f, &aHackertool by Hack4Crack&f, &aWorldedit&f, &eViaVersion&f, &aAAC&f, &cAuthMe"));
+                player.sendMessage(EvelynxkaCommunity.format("&fPlugins (6): &aTwitter&f, &aHackertool by Hack4Crack&f, &aWorldedit&f, &eViaVersion&f, &aAAC&f, &cAuthMe"));
             }
         }
     }

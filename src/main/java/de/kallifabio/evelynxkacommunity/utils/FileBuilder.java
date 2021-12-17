@@ -1,4 +1,4 @@
-package de.kallifabio.evelyncommunity.utils;
+package de.kallifabio.evelynxkacommunity.utils;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;

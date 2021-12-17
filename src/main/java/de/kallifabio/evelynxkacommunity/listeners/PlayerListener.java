@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.listeners;
+package de.kallifabio.evelynxkacommunity.listeners;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.attribute.Attribute;
@@ -22,12 +22,12 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         player = event.getPlayer();
-        event.setJoinMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&7" + player.getName() + " &ahat den Server betreten"));
-        player.sendTitle(EvelynCommunity.format("&8Willkommen &7" + player.getName()), EvelynCommunity.format(" &8auf dem &dEvelynCommunity&9Server"), 25, 35, 25);
+        event.setJoinMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&7" + player.getName() + " &ahat den Server betreten"));
+        player.sendTitle(EvelynxkaCommunity.format("&8Willkommen &7" + player.getName()), EvelynxkaCommunity.format(" &8auf dem &dEvelynxkaCommunity&9Server"), 25, 35, 25);
         resetCooldown();
         new IPCommandListener().getBuilder().save();
-        if (!EvelynCommunity.getBossbarManager().getBar().getPlayers().contains(player)) {
-            EvelynCommunity.getBossbarManager().addPlayer(player);
+        if (!EvelynxkaCommunity.getBossbarManager().getBar().getPlayers().contains(player)) {
+            EvelynxkaCommunity.getBossbarManager().addPlayer(player);
         }
         setAllPlayerTeams();
     }
@@ -35,14 +35,14 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         player = event.getPlayer();
-        event.setQuitMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&7" + player.getName() + " &chat den Server verlassen"));
+        event.setQuitMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&7" + player.getName() + " &chat den Server verlassen"));
         new IPCommandListener().getBuilder().save();
     }
 
     @EventHandler
     public void onPlayerKick(PlayerKickEvent event) {
         player = event.getPlayer();
-        event.setReason(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&7Du wurdest gekickt."));
+        event.setReason(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&7Du wurdest gekickt."));
         new IPCommandListener().getBuilder().save();
     }
 
@@ -54,7 +54,7 @@ public class PlayerListener implements Listener {
             public void run() {
                 resetCooldown();
             }
-        }.runTaskLater(EvelynCommunity.getInstance(), 20);
+        }.runTaskLater(EvelynxkaCommunity.getInstance(), 20);
     }
 
     private void resetCooldown() {
@@ -84,8 +84,8 @@ public class PlayerListener implements Listener {
             players = scoreboard.registerNewTeam("003");
         }
 
-        owner.setPrefix(EvelynCommunity.format("&4Owner &7| "));
-        sub.setPrefix(EvelynCommunity.format("&3Sub &7| "));
+        owner.setPrefix(EvelynxkaCommunity.format("&4Owner &7| "));
+        sub.setPrefix(EvelynxkaCommunity.format("&3Sub &7| "));
 
         owner.setColor(ChatColor.DARK_RED);
         sub.setColor(ChatColor.DARK_AQUA);

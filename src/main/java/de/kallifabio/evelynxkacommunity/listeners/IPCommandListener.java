@@ -1,7 +1,7 @@
-package de.kallifabio.evelyncommunity.listeners;
+package de.kallifabio.evelynxkacommunity.listeners;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
-import de.kallifabio.evelyncommunity.utils.FileBuilder;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
+import de.kallifabio.evelynxkacommunity.utils.FileBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerLoginEvent;
 
 public class IPCommandListener implements Listener, CommandExecutor {
 
-    FileBuilder builder = new FileBuilder("plugins/EvelynCommunity", "ip.yml");
+    FileBuilder builder = new FileBuilder("plugins/EvelynxkaCommunity", "ip.yml");
 
     @EventHandler
     public void onPlayerLogin(PlayerLoginEvent event) {
@@ -27,7 +27,7 @@ public class IPCommandListener implements Listener, CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "Du musst ein Spieler sein"));
+            sender.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "Du musst ein Spieler sein"));
             return true;
         }
 
@@ -35,21 +35,21 @@ public class IPCommandListener implements Listener, CommandExecutor {
         if (player.getName().equals("kallifabio")) {
             if (cmd.getName().equalsIgnoreCase("ip")) {
                 if (args.length == 0) {
-                    player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&cBitte benutze &6/ip <Name>"));
+                    player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&cBitte benutze &6/ip <Name>"));
                 }
 
                 if (args.length == 1) {
                     String target = args[0];
                     if (builder.getString("IPs." + getUUID(target) + ".IP") != null) {
                         String ip = builder.getString("IPs." + getUUID(target) + ".IP");
-                        player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&6Die IP von &9" + target + " &6ist &9" + ip));
+                        player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&6Die IP von &9" + target + " &6ist &9" + ip));
                     } else {
-                        player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + "&cDer Spieler wurde nicht gefunden"));
+                        player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + "&cDer Spieler wurde nicht gefunden"));
                     }
                 }
             }
         } else {
-            player.sendMessage(EvelynCommunity.format(EvelynCommunity.getPrefix() + EvelynCommunity.getNoPermission()));
+            player.sendMessage(EvelynxkaCommunity.format(EvelynxkaCommunity.getPrefix() + EvelynxkaCommunity.getNoPermission()));
         }
         return false;
     }

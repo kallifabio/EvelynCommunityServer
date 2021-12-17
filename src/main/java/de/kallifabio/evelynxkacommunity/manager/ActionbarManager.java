@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.manager;
+package de.kallifabio.evelynxkacommunity.manager;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
@@ -18,7 +18,7 @@ public class ActionbarManager {
 
     public static void updateActionBar() {
         final SimpleDateFormat simpleDateFormatTime = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
-        final String message = EvelynCommunity.format("&8&lEs ist &f» &a" + simpleDateFormatTime.format(new Date()));
+        final String message = EvelynxkaCommunity.format("&8&lEs ist &f» &a" + simpleDateFormatTime.format(new Date()));
 
         Bukkit.getOnlinePlayers().forEach(current -> sendActionbar(current, message));
     }

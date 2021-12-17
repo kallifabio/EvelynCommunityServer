@@ -1,6 +1,6 @@
-package de.kallifabio.evelyncommunity.listeners;
+package de.kallifabio.evelynxkacommunity.listeners;
 
-import de.kallifabio.evelyncommunity.EvelynCommunity;
+import de.kallifabio.evelynxkacommunity.EvelynxkaCommunity;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -40,18 +40,18 @@ public class SleepListener implements Listener {
         int playersInBedNeeded = getPlayersInBedNeeded(world);
 
         world.getPlayers().forEach(p ->
-                p.sendMessage(EvelynCommunity.format(String.format("&cEs befinden sich &7%d/%d &cSpieler im Bett zum schlafen",
+                p.sendMessage(EvelynxkaCommunity.format(String.format("&cEs befinden sich &7%d/%d &cSpieler im Bett zum schlafen",
                         this.playersInBed, playersInBedNeeded))));
 
         if (playersInBedNeeded < this.playersInBed)
             return;
 
-        EvelynCommunity.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(EvelynCommunity.getInstance(), () -> {
+        EvelynxkaCommunity.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(EvelynxkaCommunity.getInstance(), () -> {
             if (playersInBed < playersInBedNeeded)
                 return;
 
             this.showWakeupMessage = false;
-            EvelynCommunity.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(EvelynCommunity.getInstance(), () -> {
+            EvelynxkaCommunity.getInstance().getServer().getScheduler().scheduleSyncDelayedTask(EvelynxkaCommunity.getInstance(), () -> {
                 this.showWakeupMessage = true;
             }, 20L);
 
@@ -81,7 +81,7 @@ public class SleepListener implements Listener {
 
         if (this.showWakeupMessage) {
             world.getPlayers().forEach(player ->
-                    player.sendMessage(EvelynCommunity.format(String.format("&cEs befinden sich &7%d/%d &cSpieler im Bett zum schlafen",
+                    player.sendMessage(EvelynxkaCommunity.format(String.format("&cEs befinden sich &7%d/%d &cSpieler im Bett zum schlafen",
                             this.playersInBed, this.getPlayersInBedNeeded(world)))));
         }
     }
