@@ -1,0 +1,12 @@
+name: EvelynCommunity
+version: 1.0
+author: kallifabio
+main: de.kallifabio.evelyncommunity.EvelynCommunity
+
+commands:
+  broadcast:
+  ping:
+  ip:
+  gm:
+  day:
+  night:
