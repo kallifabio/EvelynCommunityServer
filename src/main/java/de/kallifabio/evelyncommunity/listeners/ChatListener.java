@@ -111,15 +111,5 @@ public class ChatListener implements Listener {
                 player.sendMessage(EvelynCommunity.format("&fPlugins (6): &aTwitter&f, &aHackertool by Hack4Crack&f, &aWorldedit&f, &eViaVersion&f, &aAAC&f, &cAuthMe"));
             }
         }
-
-        if (command.toLowerCase().startsWith("/help")) {
-            if (player.getName().equals("kallifabio")) {
-                event.setCancelled(false);
-            } else {
-                event.setCancelled(true);
-                player.sendMessage(EvelynCommunity.format("&8---------&aSpieler-Help&8---------"));
-                player.sendMessage(EvelynCommunity.format("&8---------&aSpieler-Help&8---------"));
-            }
-        }
     }
 }

@@ -40,18 +40,22 @@ public class BossbarManager {
                         break;
                     case 0:
                         bar.setColor(BarColor.GREEN);
+                        bar.setStyle(BarStyle.SOLID);
                         bar.setTitle(EvelynCommunity.format("&3Instagram&8: &eevelynkafriedrich"));
                         break;
                     case 1:
                         bar.setColor(BarColor.PINK);
+                        bar.setStyle(BarStyle.SOLID);
                         bar.setTitle(EvelynCommunity.format("&3Discord&8: &eIn Wartung..."));
                         break;
                     case 2:
                         bar.setColor(BarColor.YELLOW);
+                        bar.setStyle(BarStyle.SOLID);
                         bar.setTitle(EvelynCommunity.format("&eEvelynxka Twitch Community Server"));
                         break;
                     default:
                         bar.setColor(BarColor.BLUE);
+                        bar.setStyle(BarStyle.SOLID);
                         bar.setTitle(EvelynCommunity.format("&3Powered by §7kallifabio, Bero-Host"));
                         count = -1;
                         break;

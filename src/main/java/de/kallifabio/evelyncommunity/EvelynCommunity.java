@@ -45,6 +45,7 @@ public class EvelynCommunity extends JavaPlugin {
         getCommand("gm").setExecutor(new gamemodeCommand());
         getCommand("day").setExecutor(new dayCommand());
         getCommand("night").setExecutor(new nightCommand());
+        getCommand("socialmedia").setExecutor(new socialmediaCommand());
     }
 
     private void updateBar() {

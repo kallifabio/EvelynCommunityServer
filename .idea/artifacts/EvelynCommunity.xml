@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="EvelynCommunity">
-    <output-path>$PROJECT_DIR$/../../Plugin Output/EvelynCommunityServer/out/artifacts/EvelynCommunity</output-path>
+    <output-path>$PROJECT_DIR$/../../Plugin Output/EvelynCommunityServer</output-path>
     <root id="archive" name="EvelynCommunity.jar">
       <element id="module-output" name="EvelynCommunityServer" />
     </root>
